@@ -1,0 +1,55 @@
+// Global variables
+$logo-font: 'Titillium Web', sans-serif;
+$header-font: 'Istok Web', sans-serif;
+$content-font: 'PT Sans', sans-serif;
+
+
+$main-color: #33BCFF;
+$blue: #22b2ed;
+
+
+// Mixins
+@mixin bp($point) {
+  
+  $small: "(min-width: 767px)";
+  $medium: "(min-width: 992px)";
+  $large: "(min-width: 1200px)";
+  $xl: "(min-width: 1800px)";
+
+  @if $point == small {
+    @media #{$small} { @content; }
+  }
+  @else if $point == medium {
+    @media #{$medium} { @content; }
+  }
+  @else if $point == large {
+    @media #{$large}  { @content; }
+  }
+  @else if $point == xl {
+    @media #{$xl}  { @content; }
+  }
+
+}
+
+
+
+body {
+  background: #fff;
+}
+
+html, body {
+	overflow-x: hidden;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+}
+
+p, li, a {
+	font-family: $content-font;
+}
+
+
+
+
